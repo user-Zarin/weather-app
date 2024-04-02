@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.logo img {
+  margin-top:10px ;
+  margin-left: 10px;
+  width: 8vh;
+  position:fixed;
+}
+.container {
+  background-image: url("https://images.unsplash.com/photo-1592210454359-9043f067919b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .cards {
+  align-self: center;
+  width: 80%;
+  height: 60vh;
+  margin-bottom: 5vw;
+}
+.container .input {
+  display: flex;
+  justify-content: center;
+  margin: 5vw;
+  height: 8vh;
+}
+.container .input #city {
+  width: 30vw;
+  border-radius: 1vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2.5vw;
+  padding: 5px;
+  color: rgba(10, 60, 107, 0.712);
+  border: none;
+}
+.container .input #btn {
+  width: 10vw;
+  border-radius: 1vw;
+  margin-left: 1em;
+  color: white;
+  font-size: 2.5vw;
+  background-color: rgb(28, 90, 131);
+  border: none;
+}
+.container #btn:hover {
+  cursor: pointer;
+  background-color: rgb(10, 48, 73);
+}
+.cards #headLine {
+  background-color: #fff;
+  border: inset;
+  text-align: center;
+  color: rgb(28, 90, 131);
+}
+.cards .info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 23rem;
+  justify-content: space-evenly;
+}
+
+.cards .card {
+  display: flex;
+  flex-direction: column;
+  font-family:'Courier New', Courier, monospace;
+  color: wheat;
+  background-color:rgba(20, 15, 15, 0.507);
+  align-self: center;
+  height: 15rem;
+  width: 20rem;
+  border: 5px groove goldenrod;
+  border-radius: 1vw;
+  justify-content: space-evenly;
+  text-align: center;
+  box-shadow: 5px 10px 5px #22232586;
+  transition:transform 0.5s;
+}
+.cards .card h2{
+    font-size: 2rem;
+    text-shadow:6px 7px 4px #22232586;
+}
+.cards .card:hover{
+    transform: scale(1.1);
+    background-color: rgba(87, 12, 64, 0.452);
+    border: none;
+}
+.cards .card .small{
+    opacity: 0.8;
+    font-size: 1.5rem;
+}
+@media only screen and (max-width:1210px){
+  body{
+    background-image:url("https://images.unsplash.com/photo-1565052699429-f96e6a2aa8ec?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+  }
+  .container{
+    background: none;
+  }
+  .container .card {
+    margin: 3vw 2vw;
+  }
+}
+@media only screen and (max-width:900px){
+  .container .card {
+    height: 28vw;
+    width: 30vw;
+  }
+}
+@media only screen and (max-width:500px){
+  .cards{
+    margin-top: 3rem;
+  }
+  .container .card{
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: rgb(1, 8, 75);
+    text-shadow: none;
+    transition: none;
+    width: 100%;
+    text-align: start;
+    margin: 0px;
+  }
+  .container .card:hover{
+    transform: none;
+    background:none;
+  }
+  .container .input{
+    justify-content: end;
+  }
+  .container .input #city{
+    width: 40vw;
+  }
+}
